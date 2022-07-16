@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200&display=swap');
+
+:root{
+    --black: rgb(0, 0, 0);
+    --blue: rgb(80, 166, 206);
+    --text-shadow: -1rem .1rem .3rem #333;
+    --box-shadow: -1rem .1rem .3rem #333
+}
+
+
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    transition: all .7s linear;
+}
+
+body {
+    color: rgb(0, 0, 0);
+    font-family: 'Sora', sans-serif;
+}
+
+.header {
+    display: flex;
+    background: #9471c2;
+}
+
+
+.wrapper {
+    width: 1%;
+    height: 100vh;
+    display: table-cell;
+    background: aliceblue;
+    vertical-align: middle;
+    font-family: 'Sora', sans-serif;
+}
+
+.sign-panels {
+    width: 650px;
+    background: #b08cdf;
+    padding: 40px 80px;
+    margin: 40px auto;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.login, .signup {
+    position: relative;
+}
+
+.title span {
+    display: block;
+    font-size: 46px;
+    font-weight: bold;
+}
+
+.title p {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 20px;
+}
+
+.btn-face, .btn-twitter {
+    color: aliceblue;
+    display: inline-block;
+    width: 200px;
+    font-size: 20px;
+    height: 50px;
+    border-radius: 50px;
+    text-decoration: none;
+    padding: 11px 0;
+    font-weight: 500;
+}
+
+.btn-face .fa, .btn-twitter .fa {
+    margin-right: 15px;
+}
+
+.btn-face {
+    margin-right: 25px;
+    background: #5397d7;
+}
+
+.btn-twitter {
+    background: #40b9e0;
+}
+
+.or {
+    margin: 35px 0;
+    font-weight: 500;
+}
+
+/* .or::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #333;
+    position: absolute;
+    margin-top: -10px;
+    z-index: 0;
+} */
+
+.or span {
+    display: block;
+    background: #b08cdf;
+    width: 50px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.sign-panels input {
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background: aliceblue;
+    text-align: center;
+    padding: 10px;
+    color: #333;
+    font-weight: 500;
+}
+
+.sign-panels input:focus {
+    outline: none;
+}
+
+.sign-panels input[type="checkbox"] {
+    display: none;
+}
+
+.sign-panels input[type="checkbox"] + label {
+    display: block;
+    width: 50%;
+    text-align: left;
+    padding-left: 60px;
+    cursor: pointer;
+    font-weight: 500; 
+    margin-top: 10px;
+    float: left;
+    height: 50px;
+    padding-top: 15px;
+}
+
+.sign-panels input[type="checkbox"] + label::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: antiquewhite;
+    position: absolute;
+    left: 30px;
+    border-radius: 50%;
+    border: 2px solid white; 
+    box-shadow: 0 0 0 5px #9471c2;
+    transition: all .3s ease;
+}
+
+.sign-panels input[type="checkbox"]:checked + label::before {
+    background: #7510f7;
+    box-shadow: 0 0 0 5px #9471c2;
+    transition: all .3s ease;
+}
+
+.btn-signin {
+    display: inline-block;
+    width: 50%;
+    margin-top: 10px;
+    height: 50px;
+    background: #9471c2;
+    border-radius: 50px;
+    padding: 11px;
+    font-size: 20px;
+    color: aliceblue;
+    text-decoration: none;
+    font-weight: 500;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.btn-reset, .btn-member, .btn-fade {
+    font-size: 19px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    display: block;
+    margin: 30px auto 0;
+    text-decoration: none;
+}
+
+.btn-member {
+    margin-top: 15px;
+}
+
+.btn-member .fa, .btn-reset .fa {
+    margin-left: 6px;
+}
+
+.notification p {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.notification span {
+    color: #7510f7;
+}
+
+.error {
+    display: block;
+    color: #9471c2;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 16px 0;
+}
+
+@media screen and (max-width:768px) {
+    .sign-panels {
+        padding: 40px;
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:570px){
+    .sign-panels {
+        padding: 43px 20px;
+    }
+    .btn-face, .btn-twitter {
+        width: 100%;
+    }
+    .btn-face {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .sign-panels input[type="checkbox"]{
+        width: 100%;
+    }
+    .btn-signin {
+        width: 80%;
+    }
+    .title span {
+        font-size: 36px;
+    }
+}
